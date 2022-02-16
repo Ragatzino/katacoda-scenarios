@@ -1,6 +1,7 @@
 {
   "title": "Atelier docker SNDIO : Première séance",
   "description": "Environnement pour un atelier docker avec maven et openjdk11",
+  "icon":"https://www.docker.com/sites/default/files/d8/2019-07/Moby-logo.png",
   "difficulty": "Beginner",
   "time": "3 hours",
   "details": {
