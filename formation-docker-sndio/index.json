@@ -1,6 +1,6 @@
 {
   "title": "Atelier docker SNDIO : Première séance",
-  "description": "Environnement pour un atelier docker avec maven et openjdk11",
+  "description": "Atelier docker, packaging d'une application java a l'aide de Maven et Docker. Application avec docker compose avec une base Postgresql",
   "icon":"https://www.docker.com/sites/default/files/d8/2019-07/Moby-logo.png",
   "difficulty": "Beginner",
   "time": "3 hours",
