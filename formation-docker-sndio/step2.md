@@ -44,5 +44,5 @@ docker exec -it <id-du-tomcat> bash
 `
 
 
->>Q1: Combien y a-t-il de fichiers dans webapps dans le conteneur après son démarrage? <<
+>> Question : combien y a-t-il de fichiers dans ./webapps dans le conteneur après son démarrage? <<
 === 0
