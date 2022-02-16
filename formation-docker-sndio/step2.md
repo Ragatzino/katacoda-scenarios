@@ -6,6 +6,15 @@
 docker run hello-world
 `{{execute}}
 
+Cette image décrit tout le déroulement de son processus.
+
+L'option -p permet de définir le port sur la machine hote ouvert sur le conteneur : un tomcat exposant sur le port 8080 par défaut
+
+`
+docker run -p 8080:8080 tomcat
+`{{execute}}
+
+Expose le port 8080 du conteneur vers le port 8080 de la machine.
 
 ### Consultez les processus
 
@@ -17,20 +26,3 @@ ps
 docker ps
 `{{execute}}
 
-### Packager une application
-
-Maven propose ici de générer un war par le stage : package 
-
-`
-mvn package
-`{{execute}}
-
-
-`
-mvn package
-`{{execute}}
-### Accédez a l'application
-
-Par l'onglet "+" a droite du terminal, accédez a l'application au port 8080
-
-> Maintenant, vous êtes prêts à suivre la formation

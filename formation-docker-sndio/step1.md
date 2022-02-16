@@ -15,7 +15,7 @@ git clone https://github.com/Ragatzino/Initiation-docker-kubernetes formation
 
 Il s'agit là d'une application spring-boot classique.
 
-`less pom.xml`{{execute}} (voir les dépendances)
+`cat pom.xml`{{execute}} (voir les dépendances)
 
 `mvn spring-boot:run`{{execute}}
 

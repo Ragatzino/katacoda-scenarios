@@ -1,6 +1,6 @@
 # Atelier Docker Kubernetes SNDIO
 
-Au programme : 
+Au programme :
 
 - Rappels généraux : Conteneur, Docker, comparaison avec existant
 - Utilisation d'une image trouvée sur internet
