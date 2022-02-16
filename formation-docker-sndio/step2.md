@@ -17,13 +17,13 @@ ps
 docker ps
 `{{execute}}
 
-### Lancez l'application
+### Packager une application
 
-Il s'agit là d'une application spring-boot classique.
+Maven propose ici de générer un war par le stage : package 
 
-`less pom.xml`{{execute}} (voir les dépendances)
-
-`mvn spring-boot:run`{{execute}}
+`
+mvn package
+`{{execute}}
 
 ### Accédez a l'application
 

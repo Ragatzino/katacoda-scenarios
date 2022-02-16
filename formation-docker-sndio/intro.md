@@ -1,4 +1,4 @@
-# Atelier Docker SNDIO
+# Atelier Docker Kubernetes SNDIO
 
 Au programme : 
 
