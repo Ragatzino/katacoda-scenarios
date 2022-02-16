@@ -6,7 +6,7 @@
   "details": {
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Mise en place",
         "text": "step1.md"
       },
       {
@@ -35,7 +35,6 @@
   },
   "environment": {
     "uilayout": "editor-terminal",
-    "showide": true,
     "showvisualise": true,
     "scope": "docker run --name=scope -d --net=host --pid=host --privileged -v /var/run/docker.sock:/var/run/docker.sock:rw weaveworks/scope:1.9.1 --probe.docker=true",
     "scopePort": 4040
