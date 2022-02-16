@@ -1,6 +1,6 @@
 {
   "title": "Atelier docker kubernetes SNDIO : Première séance",
-  "description": "Atelier docker, packaging d'une application java a l'aide de Maven et Docker. Application avec docker compose avec une base Postgresql",
+  "description": "Atelier docker, packaging d'une application java a l'aide de Maven et Docker. Application avec docker compose pour une base Postgresql",
   "difficulty": "Beginner",
   "time": "3 hours",
   "details": {
