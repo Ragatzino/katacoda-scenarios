@@ -1,5 +1,5 @@
 {
-  "title": "formation docker sndio",
+  "title": "Atelier docker SNDIO : Première séance",
   "description": "Environnement pour un atelier docker avec maven et openjdk11",
   "difficulty": "Beginner",
   "time": "3 hours",
@@ -33,8 +33,10 @@
       "text": "finish.md"
     }
   },
-  "environment": {},
+  "environment": {
+    "showide": true
+  },
   "backend": {
-    "imageid": "ubuntu:2004"
+    "imageid": "openjdk:15"
   }
 }
