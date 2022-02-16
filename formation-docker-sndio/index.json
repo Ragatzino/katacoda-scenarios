@@ -1,7 +1,6 @@
 {
   "title": "Atelier docker kubernetes SNDIO : Première séance",
   "description": "Atelier docker, packaging d'une application java a l'aide de Maven et Docker. Application avec docker compose avec une base Postgresql",
-  "icon":"https://www.docker.com/sites/default/files/d8/2019-07/Moby-logo.png",
   "difficulty": "Beginner",
   "time": "3 hours",
   "details": {
@@ -37,7 +36,7 @@
   "environment": {
     "uilayout": "terminal",
     "showdashboard": true,
-    "dashboards":[{"name": "Port 8080", "port": 8080}]
+    "dashboards":[{"name": "Port 8080", "port": 8080}],
     "showide": true
   },
   "backend": {
