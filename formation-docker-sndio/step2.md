@@ -6,8 +6,8 @@
 docker run hello-world
 `{{execute}}
 
+Cette image décrit tout le déroulement de sa récupération a son execution.
 ### Quelques options
-Cette image décrit tout le déroulement de son processus.
 
 Le numéro après le **:** permet de définir la version. (voir https://hub.docker.com/_/tomcat) par exemple.
 
