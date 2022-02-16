@@ -7,7 +7,9 @@
     "steps": [
       {
         "title": "Mise en place",
-        "text": "step1.md"
+        "text": "step1.md",
+        "courseData":"setup.sh",
+        "code":"show-version.sh"
       },
       {
         "title": "Premiers pas avec docker",
@@ -40,6 +42,6 @@
     "showide": true
   },
   "backend": {
-    "imageid": "openjdk:15"
+    "imageid": "ubuntu:2004"
   }
 }

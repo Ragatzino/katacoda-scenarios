@@ -25,6 +25,10 @@ Maven propose ici de générer un war par le stage : package
 mvn package
 `{{execute}}
 
+
+`
+mvn package
+`{{execute}}
 ### Accédez a l'application
 
 Par l'onglet "+" a droite du terminal, accédez a l'application au port 8080

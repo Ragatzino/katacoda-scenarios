@@ -21,6 +21,6 @@ Il s'agit là d'une application spring-boot classique.
 
 ### Accédez a l'application
 
-Créez un nouvel onglet par le bouton **+** permettant d'accéder a l'application au port 8080
+Un onglet Port 8080 vous permet d'accéder a l'application, vous pouvez également en définir d'autre par la suite avec le **+**
 
 > Maintenant, vous êtes prêts à suivre la formation
