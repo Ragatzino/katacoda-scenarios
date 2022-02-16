@@ -19,7 +19,7 @@ docker run -p 8080:8080 tomcat:9.0
 
 > Cela expose le port 8080 du conteneur vers le port 8080 de la machine.
 
-L'option -d permet de lancer un conteneur sans s'y connecter.
+L'option -d permet de lancer un conteneur sur la machine en arrière plan.
 
 `
 docker run -d -p 8888:8080 tomcat:9.0
