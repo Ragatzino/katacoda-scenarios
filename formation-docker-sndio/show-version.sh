@@ -1,5 +1,4 @@
 #!/bin/bash
 mvn -version
 java -version
-sleep 10
-clear
+sleep 10 && clear
