@@ -20,11 +20,15 @@
         "text": "step3.md"
       },
       {
-        "title": "Step 4",
+        "title": "Cas des données persistées",
         "text": "step4.md"
       },
       {
-        "title": "Step 5",
+        "title": "Packaging groupé, docker compose",
+        "text": "step5.md"
+      },
+      {
+        "title": "Packaging groupé, docker compose",
         "text": "step5.md"
       }
     ],

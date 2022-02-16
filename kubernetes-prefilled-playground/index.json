@@ -22,7 +22,7 @@
     }
   },
   "environment": {
-    "uilayout": "terminal",
+    "uilayout": "terminal-terminal",
     "showide": true
   },
   "backend": {
