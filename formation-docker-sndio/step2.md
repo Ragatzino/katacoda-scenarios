@@ -14,7 +14,7 @@ L'option -p permet de définir le port sur la machine hote ouvert sur le contene
 docker run -p 8080:8080 tomcat
 `{{execute}}
 
-Expose le port 8080 du conteneur vers le port 8080 de la machine.
+> Cela expose le port 8080 du conteneur vers le port 8080 de la machine.
 
 ### Consultez les processus
 
