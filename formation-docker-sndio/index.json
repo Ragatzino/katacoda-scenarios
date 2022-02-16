@@ -11,11 +11,11 @@
         "text": "step1.md"
       },
       {
-        "title": "Step 2",
+        "title": "Premiers pas avec docker",
         "text": "step2.md"
       },
       {
-        "title": "Step 3",
+        "title": "Utilisation et création d'une image docker",
         "text": "step3.md"
       },
       {
@@ -35,10 +35,7 @@
     }
   },
   "environment": {
-    "uilayout": "editor-terminal",
-    "showvisualise": true,
-    "scope": "docker run --name=scope -d --net=host --pid=host --privileged -v /var/run/docker.sock:/var/run/docker.sock:rw weaveworks/scope:1.9.1 --probe.docker=true",
-    "scopePort": 4040
+    "uilayout": "vscode-terminal-split"
   },
   "backend": {
     "imageid": "openjdk:15"
