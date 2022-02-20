@@ -33,10 +33,11 @@ Le Dockerfile propose ici, (comme indiqué dans la doc sur DockerHub), de copier
 Construire une image revient a l'utilisation de la commande docker build : 
 
 `
-docker build -t my-apache2 .
+docker build -t monapache .
 `{{execute}}
 
 ## Lancez votre application
+Encore une fois on va lancer l'application, elle tourne sur le port 8080 dans le container
 `
-docker run -dit --name my-running-app -p 8080:80 my-apache2
+docker run -dit --name apache-test -p 8080:80 monapache
 `{{execute}}
