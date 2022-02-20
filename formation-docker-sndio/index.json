@@ -28,16 +28,16 @@
         "text": "4-build-maven-docker-image.md"
       },
       {
-        "title": "Construction d'une image docker pour une base de données et utilisation",
+        "title": "Construction d'une image docker pour une base de données PostgreSql et utilisation",
         "text": "5-postgres-run.md"
       },
       {
-        "title": "Packaging groupé, docker compose",
+        "title": "Packaging groupé, docker compose et environnement",
         "text": "6-docker-compose.md"
       },
       {
-        "title": "Packaging groupé, docker compose",
-        "text": "step5.md"
+        "title": "Automatisation avec kaniko",
+        "text": "7-kaniko.md"
       }
     ],
     "intro": {
