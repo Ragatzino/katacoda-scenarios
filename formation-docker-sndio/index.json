@@ -7,8 +7,7 @@
     "steps": [
       {
         "title": "Informations générales",
-        "text":"0-informations-generales.md",
-        "code":"scripts/script-versions.sh"
+        "text":"0-informations-generales.md"
       },
       {
         "title": "Premiers pas avec docker",

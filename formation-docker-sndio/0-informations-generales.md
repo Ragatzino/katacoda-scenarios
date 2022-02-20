@@ -4,7 +4,7 @@
 
 ### Environnement
 
-- Vous êtes sur un ubuntu 18.04 : 
+Vous êtes sur un ubuntu 18.04 : 
 
 `
 uname -a
