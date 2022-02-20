@@ -1,6 +1,10 @@
+### Accéder a la présentation
 
+- LIEN VERS LA PRESENTATION
 
 ### Execution d'images
+
+Commençons par executer une image docker de base : 
 
 `
 docker run hello-world
@@ -35,14 +39,19 @@ ps
 docker ps
 `{{execute}}
 
-### Une question
+### Exécuter du code sur un conteneur
 Vous pouvez executez du code sur des conteneurs avec la commande **exec**
 et l'option -it permet de passer en mode interactif sur une conteneur
 Testez par exemple:
+
+`
+docker exec <id-du-tomcat> cat README.md
+`
+
 `
 docker exec -it <id-du-tomcat> bash
 `
-
+(ne fonctionne que si l'image à bash, évidemment)
 
 >> Question : combien y a-t-il de fichiers dans ./webapps dans le conteneur après son démarrage? <<
 === 0

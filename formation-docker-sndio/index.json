@@ -6,22 +6,22 @@
   "details": {
     "steps": [
       {
-        "title": "Mise en place",
-        "text": "step1.md",
-        "courseData":"setup.sh",
-        "code":"show-version.sh"
-      },
-      {
         "title": "Premiers pas avec docker",
-        "text": "step2.md"
+        "text": "1-run-images.md",
+        "courseData":"setup.sh"
       },
       {
         "title": "Utilisation et création d'une image docker",
-        "text": "step3.md"
+        "text": "2-build-images.md"
+      },
+      {
+        "title": "Travaux sur une appli webservice springboot",
+        "text": "3-maven-run.md",
+        "code":"show-version.sh"
       },
       {
         "title": "Cas des données persistées",
-        "text": "step4.md"
+        "text": "4-build-maven-docker-image.md"
       },
       {
         "title": "Packaging groupé, docker compose",
