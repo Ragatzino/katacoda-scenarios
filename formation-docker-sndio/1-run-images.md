@@ -9,12 +9,12 @@ docker run hello-world
 Cette image décrit tout le déroulement de sa récupération a son execution.
 ### Quelques options
 
-Le numéro après le **:** permet de définir la version. (voir https://hub.docker.com/_/tomcat) par exemple jre11-openjdk-slim => jre11-openjdk = java openjdk11 et slim = image plus légère embarquant moins d'os.
+Le numéro après le **:** permet de définir la version. (voir https://hub.docker.com/_/tomcat) par exemple tomcat:9-jre11 => 9-jre11 = java 11, tomcat 9. Des versions plus légères existent mais pour un usage moins garanti (voir doc).
 
 L'option -p permet de définir le port sur la machine hote ouvert sur le conteneur : un tomcat exposant sur le port 8080 par défaut
 
 `
-docker run -p 8080:8080 tomcat:jre11-openjdk-slim
+docker run -p 8080:8080 tomcat:9-jre11
 `{{execute}}
 
 > Cela expose le port 8080 du conteneur vers le port 8080 de la machine.
@@ -22,7 +22,7 @@ docker run -p 8080:8080 tomcat:jre11-openjdk-slim
 L'option -d permet de lancer un conteneur sur la machine en arrière plan.
 
 `
-docker run -d -p 8888:8080 tomcat:jre11-openjdk-slim
+docker run -d -p 8888:8080 tomcat:9-jre11
 `{{execute}}
 
 ### Consultez les processus

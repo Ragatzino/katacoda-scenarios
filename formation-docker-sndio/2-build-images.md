@@ -43,7 +43,32 @@ docker build -t monapache ./apache/
 => C'est équivalent a se déplacer sur ./apache et a faire : docker build -t monapache .
 
 ## Lancez votre application
-Encore une fois on va lancer l'application, elle tourne sur le port 8080 dans le container
+Encore une fois on va lancer l'application, elle tourne sur le port 80 dans le container
 `
 docker run -dit --name apache-test -p 8080:80 monapache
 `{{execute}}
+
+## Ajouter votre image a un registry
+    
+Le concept de registre d'image est simple, et vous en avez déjà utilisé un : dockerhub. 
+
+Nous allons ici nous authentifier et rajouter notre image a dockerhub mais le fonctionnement serait le même avec tout autre registre (harbor interne par exemple)
+
+Connectez vous via identifiant / mot de passe dockerhub avec la commande :
+`
+docker login
+`{{execute}}
+
+Il faut ensuite créer un tag pour que l'image soit envoyée au bon endroit :
+
+`
+docker tag monapache <user>/monapache:latest
+`
+
+et envoyer via push l'image taguée : 
+
+`
+docker push <user>/monapache:latest
+`
+
+(en remplaçant <user> par votre identifiant sur dockerhub)
