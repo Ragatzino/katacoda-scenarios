@@ -1,7 +1,3 @@
-### Accéder a la présentation
-
-- LIEN VERS LA PRESENTATION
-
 ### Execution d'images
 
 Commençons par executer une image docker de base : 

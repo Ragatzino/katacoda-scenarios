@@ -6,6 +6,11 @@
   "details": {
     "steps": [
       {
+        "title": "Informations générales",
+        "text":"0-informations-generales.md",
+        "code":"scripts/script-versions.sh"
+      },
+      {
         "title": "Premiers pas avec docker",
         "text": "1-run-images.md",
         "courseData":"scripts/setup.sh"
@@ -13,12 +18,11 @@
       {
         "title": "Utilisation et création d'une image docker",
         "text": "2-build-images.md",
-        "courseData":"scripts/fetch-sources-for-apache.sh"
+        "courseData":"scripts/script-apache.sh"
       },
       {
         "title": "Travaux sur une appli webservice springboot",
-        "text": "3-maven-run.md",
-        "code":"scripts/java-maven-show-version.sh"
+        "text": "3-maven-run.md"
       },
       {
         "title": "Cas des données persistées",
