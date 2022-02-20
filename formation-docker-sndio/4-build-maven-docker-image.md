@@ -40,7 +40,7 @@ Mot clés nécessaires (on les retrouve dans [la documentation](https://docs.doc
 ```
 FROM <image>
 EXPOSE 8080
-ADD <fichier> <fichier-cible>
+COPY <fichier> <fichier-cible>
 CMD [<commande>, <arguments>]
 ```
 

@@ -1,3 +1,6 @@
+
+<br/>
+
 ## Packager une application : Une image docker
 
 Docker propose un système de construction personnalisées d'image docker : 
@@ -11,7 +14,7 @@ Il faut comprendre que l'on part toujours d'un environnement existant pour crée
 - Une distribution linux
 - Un environnement qui part de cet environnement et dispose des ressources pour faire tourner l'application (scripts de démarrage et binaires)
 
-=> On part souvent d'une image "haut niveau" en y rajoutant un petit script
+=> On part souvent d'une image "haut niveau" en y rajoutant un petit script (on ne réinvente pas la roue)
 
 ## Exemple avec un serveur statique hébergeant une page HTML
 
@@ -32,15 +35,14 @@ Le Dockerfile propose ici, (comme indiqué dans la doc sur DockerHub), de copier
 
 Construire une image revient a l'utilisation de la commande docker build : 
 
-`
-docker build -t monapache ./apache/
-`{{execute}}
-
-- [docker build documentation](https://docs.docker.com/engine/reference/commandline/build/)
+- [docker build](https://docs.docker.com/engine/reference/commandline/build/)
 - La balise -t permet de nommer son image docker
 
 - Le dernier argument est l'emplacement du fichier Dockerfile, à partir duquel on va créer l'image
-=> C'est équivalent a se déplacer sur ./apache et a faire : docker build -t monapache .
+
+`
+docker build -t monapache ./apache/
+`{{execute}}
 
 ## Lancez votre application
 Encore une fois on va lancer l'application, elle tourne sur le port 80 dans le container
