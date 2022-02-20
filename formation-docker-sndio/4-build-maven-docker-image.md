@@ -1,6 +1,3 @@
-
-## Scénario pour un tomcat
-
 ### Création d'un war
 Maven propose de générer un war par le stage : package 
 
@@ -15,7 +12,7 @@ Une fois construit, on peut l'observer dans le repertoire target :
 ls target/
 `{{execute}}
 
-### Dépot du war dans webapps/ => Création du dockerfile
+### Dépot du war dans webapps : Pseudo script
 
 Classiquement, il vous faut déposer un war dans /webapps d'un tomcat 9, java 11 pour qu'il lance l'application. Cela va être la même chose ici.
 
@@ -27,7 +24,9 @@ Pseudo script :
 - on récupère le war qui est dans ./target et on le met dans $CATALINA_HOME/webapps/
 - on relance le tomcat avec le script catalina.sh dans /bin avec l'argument **run**
 
-> Remarque le war est un ROOT.war pour être sur /
+> Remarque le war est un ROOT.war pour que le tomcat déploie l'appli sur /
+
+### Dépot du war dans webapps : Dockerfile
 
 Mot clés nécessaires (on les retrouve dans [la documentation](https://docs.docker.com/engine/reference/builder/)) : 
 - FROM: départ d'une image
@@ -46,7 +45,7 @@ CMD [<commande>, <arguments>]
 ```
 
 </p><details>
-<summary>Dockerfile</summary>
+<summary>Dockerfile (cliquer pour avoir la réponse)</summary>
     <p>
 
 ```
@@ -57,6 +56,7 @@ CMD ["catalina.sh","run"]
 ```
 
 </p>
+</details>
 
 ### Construction de l'image
 
