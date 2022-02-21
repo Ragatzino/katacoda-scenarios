@@ -21,9 +21,12 @@ docker run -p 8080:8080 tomcat:9-jre11
 > Cela expose le port 8080 du conteneur vers le port 8080 de la machine.
 
 L'option -d permet de lancer un conteneur sur la machine en arrière plan.
+=> Cette option fait que l'on retourne l'id du conteneur
 
 `
-docker run -d -p 8888:8080 tomcat:9-jre11
+ID_CONTENEUR=$(\
+docker run -d -p 8888:8080 tomcat:9-jre11 \
+)
 `{{execute}}
 
 ### Consultez les processus
@@ -42,11 +45,11 @@ et l'option -it permet de passer en mode interactif sur une conteneur
 Testez par exemple:
 
 `
-docker exec <id-du-tomcat> cat README.md
+docker exec $ID_CONTENEUR cat README.md
 `
 
 `
-docker exec -it <id-du-tomcat> bash
+docker exec -it $ID_CONTENEUR bash
 `
 (ne fonctionne que si l'image à bash, évidemment)
 
