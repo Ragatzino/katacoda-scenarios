@@ -1,6 +1,6 @@
 Pour utiliser des donnees persistees ou demarrer sur donnees persistees, Docker a un concept : les volumes.
 
-## Illustration avec le partage d'un dossier
+## Montage : Illustration avec le partage d'un dossier 
 
 Pour cet exemple nous allons partager un espace dans notre ubuntu avec un autre ubuntu, cette fois dockerisé.
 
@@ -12,7 +12,7 @@ L'option pour rajouter un volume permet de partager un sous espace de fichier en
 mkdir /root/espace-partage
 `{{execute}}
 
-L'option volume s'utilise lors du lancement via docker run avec le tag **-v**
+L'option pour monter un volume s'utilise lors du lancement via docker run avec le tag **-v**
 
 Essayez :
 `
@@ -32,17 +32,36 @@ echo "message" > /root/espace-partage/message.txt
 
 On peut aller le retrouver sur notre conteneur :
 `
-docker exec $ID_CONTENEUR ls /root/espace-partage/"
+docker exec $ID_CONTENEUR ls /root/espace-partage/
 `{{execute}}
 
-## Accès aux volumes :
+## Docker volumes
+
+Docker prévoit un espace spécifique ou stocker des volumes, utilisables par nom : /var/lib/docker/volumes.
+
+Vous pouvez créer un volume avec la commande : 
+`
+ docker volume create ubuntu_partage
+`{{execute}}
+
+`
+docker run -d \
+-v  ubuntu_partage:/root/espace-partage \
+ubuntu \
+bin/bash -c "while true; do echo hello world; sleep 1; done
+`{{execute}}
+
+
 Accédez a la liste des volumes docker
 
 `
 docker volume ls
 `{{execute}}
 
-Vous pouvez observer les détails pour chaque volume avec : 
+
+
+Vous pouvez observer les détails pour chaque volume avec :
+
 `
 docker inspect $ID_VOLUME
 `

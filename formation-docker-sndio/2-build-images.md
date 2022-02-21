@@ -46,7 +46,7 @@ docker build -t monapache ./apache/
 `{{execute}}
 
 <details>
-<summary>(Alternative)</summary>
+<summary>Alternative (cliquer pour voir)</summary>
     <p>
 
 - Déplacement

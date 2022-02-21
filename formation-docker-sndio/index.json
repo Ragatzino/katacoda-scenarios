@@ -28,8 +28,8 @@
         "text": "4-build-maven-docker-image.md"
       },
       {
-        "title": "Notion de volume",
-        "text": "5-volumes.md"
+        "title": "Persistence des données: volumes et montage",
+        "text": "5-donnees.md"
       },
       {
         "title": "Construction d'une image docker pour une base de données PostgreSql et utilisation",

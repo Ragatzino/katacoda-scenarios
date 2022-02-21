@@ -5,8 +5,7 @@ A des fins de testing, vous pourriez être amené a vouloir travailler avec un P
 ## Lancement d'un postgre
 L'installation d'une base postgres sur un environnement via docker se fait en utilisant l'image officielle postgres : https://hub.docker.com/_/postgres
 
-Pour cette image, plusieurs choses a noter : 
-- On doit valoriser la variable POSTGRES_PASSWORD, et l'on peut par ailleurs valoriser d'autres variables e.g. POSTGRES_USER,POSTGRES_DB
+> Pour cette image, on doit valoriser la variable **POSTGRES_PASSWORD**, et l'on peut par ailleurs valoriser d'autres variables e.g. **POSTGRES_USER**,**POSTGRES_DB**
 
 Lançons par exemple une instance de postgres 11 : 
 
@@ -39,11 +38,11 @@ docker volume ls
 
 ## Initialisation d'un volume
 
-Par défaut postgresql attend des données sur /var/lib/postgresql/data (on peut changer cela via la variable d'environnement PGDATA).
+Par défaut postgresql attend des données sur **/var/lib/postgresql/data** (on peut changer cela via la variable d'environnement **PGDATA**).
 
 A chaque fois que vous utilisez une image qui nécessite un volume, il est préconisé de préciser l'espace utilisé, afin de ne pas le dupliquer autant de fois que l'image tourne.
 
-Cela se fait par l'option -v de docker run :
+Cela se fait par l'option **-v** de docker run :
 `
 mkdir /root/pg_data/
 `{{execute}}
@@ -71,10 +70,10 @@ Un script d'initialisation de base de données a été chargé sur /root/postgre
 tree -L 2 /root/
 `{{execute}}
 
-Utilisez les volumes pour lancer une base de données avec les scripts disponibles dans /root/postgres/
+Utilisez les volumes pour lancer une base de données avec les scripts disponibles dans **/root/postgres/**
 
 <details>
-<summary>Solution</summary>
+<summary>Solution (cliquer pour avoir la réponse)</summary>
     <p>
 `
 docker run -d \
@@ -85,6 +84,11 @@ docker run -d \
   -v /root/postgres/:/docker-entrypoint-initdb.d/ \
   -p 5433:5432 \
   postgres:11 
+`{{execute}}
+
+Verifications : 
+`
+  psql -h localhost -p 5433  -U postgres -c 'SELECT * from user;'
 `{{execute}}
 
 </p>
