@@ -1,5 +1,4 @@
-
-<br/>
+Cette partie consiste en la construction d'une image docker, pour prendre en main les notions de construction, nous feront un cas simple : un site html statique.
 
 ## Packager une application : Une image docker
 

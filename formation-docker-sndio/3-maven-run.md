@@ -1,4 +1,4 @@
-<br/>
+Passage à une application spring-boot, spring-web pour un cas "plus réaliste".
 
 ### Récupérez le code disponible sur github : 
 

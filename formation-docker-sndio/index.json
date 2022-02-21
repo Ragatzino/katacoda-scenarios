@@ -25,19 +25,26 @@
       },
       {
         "title": "Construction d'une image docker pour un tomcat",
-        "text": "4-build-maven-docker-image.md"
+        "text": "4-build-maven-docker-image.md",
+        "courseData":"script-install-psql.sh"
+      },
+      {
+        "title": "Notion de volume",
+        "text": "5-volumes.md",
+        "courseData":"script-install-psql.sh"
       },
       {
         "title": "Construction d'une image docker pour une base de données PostgreSql et utilisation",
-        "text": "5-postgres-run.md"
+        "text": "6-postgres-run.md",
+        "courseData":"fetch-initdb.sh"
       },
       {
         "title": "Packaging groupé, docker compose et environnement",
-        "text": "6-docker-compose.md"
+        "text": "7-docker-compose.md"
       },
       {
         "title": "Automatisation avec kaniko",
-        "text": "7-kaniko.md"
+        "text": "8-kaniko.md"
       }
     ],
     "intro": {

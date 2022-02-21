@@ -1,5 +1,4 @@
-<br/>
-
+L'objectif de cette partie est l'execution d'images pour découvrir docker.
 ### Execution d'images
 
 Commençons par executer une image docker de base : 

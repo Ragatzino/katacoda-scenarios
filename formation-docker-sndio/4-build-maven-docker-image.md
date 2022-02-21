@@ -1,3 +1,6 @@
+Construction d'une image docker pour un tomcat.
+
+
 ### Création d'un war
 Maven propose de générer un war par le stage : package 
 
