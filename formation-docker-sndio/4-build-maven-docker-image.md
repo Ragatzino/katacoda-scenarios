@@ -69,7 +69,7 @@ Ajoutez le fichier Dockerfile créé a la racine de l'application puis construis
 docker build -t app .
 `{{execute}}
 
-et testez votre application
+**Testez votre application:**
 
 `
 docker run -p 8080:8080 app
