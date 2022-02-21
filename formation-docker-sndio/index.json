@@ -39,7 +39,7 @@
       {
         "title": "Packaging groupé, docker compose et environnement",
         "text": "7-docker-compose.md",
-        "courseData":"docker-kill-all.sh"
+        "courseData":"docker-compose.sh"
       },
       {
         "title": "Automatisation avec kaniko",
