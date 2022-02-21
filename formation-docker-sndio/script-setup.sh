@@ -6,7 +6,7 @@ apt install default-jdk
 apt-get install wget ca-certificates -y
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
 apt update
-apt install postgresql postgresql-contrib postgresql-client-common -y
+apt install postgresql-client-common -y
 # install maven
 wget https://www-us.apache.org/dist/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz -P /tmp
 tar xf /tmp/apache-maven-*.tar.gz -C /opt
