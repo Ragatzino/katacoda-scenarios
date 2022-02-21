@@ -32,19 +32,22 @@ cat apache/Dockerfile
 
 Le Dockerfile propose ici, (comme indiqué dans la doc sur DockerHub), de copier ses fichiers dans /usr/local/apache2/htdocs/
 
+## Docker build
+Documentation : https://docs.docker.com/engine/reference/commandline/build/
+
 Construire une image revient a l'utilisation de la commande docker build : 
 
-- [docker build](https://docs.docker.com/engine/reference/commandline/build/)
-- La balise -t permet de nommer son image docker
+> La balise -t permet de nommer son image docker
 
-- Le dernier argument est l'emplacement du fichier Dockerfile, à partir duquel on va créer l'image
+> Le dernier argument est l'emplacement du fichier Dockerfile, à partir duquel on va créer l'image
 
 `
 docker build -t monapache ./apache/
 `{{execute}}
 
 ## Lancez votre application
-Encore une fois on va lancer l'application, elle tourne sur le port 80 dans le container
+Encore une fois on va lancer l'application, elle tourne sur le port 80 dans le conteneur
+
 `
 docker run -dit --name apache-test -p 8080:80 monapache
 `{{execute}}
