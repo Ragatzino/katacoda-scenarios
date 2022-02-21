@@ -11,12 +11,13 @@ Pour cette image, plusieurs choses a noter :
 Lançons par exemple une instance de postgres 11 : 
 
 `
-docker run -d \
+ID_CONTENEUR=$(docker run -d \
   -e POSTGRES_USER=postgres \
   -e POSTGRES_DB=postgres \
   -e POSTGRES_PASSWORD=mdp \
   -p 5432:5432 \
-  --name postgres postgres:11 
+  --name postgres postgres:11 \
+  )
 `{{execute}}
 
 Vous pouvez y accéder directement:
@@ -28,8 +29,8 @@ psql -h localhost -p 5432  -U postgres -c 'SELECT 1;'
 ou depuis l'intérieur du conteneur:
 
 `
-docker exec <id-container> psql -U postgres -c 'SELECT 1;'
-`
+docker exec $ID_CONTENEUR psql -U postgres -c 'SELECT 1;'
+`{{execute}}
 
 Postgres utilise par défaut des volumes, constatez par vous même : 
 `
