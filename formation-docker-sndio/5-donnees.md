@@ -76,4 +76,10 @@ exemple :
 docker inspect ubuntu_partage
 `{{execute}}
 
+Ce qui mène a : 
+
+`
+ls /var/lib/docker/volumes/ubuntu_partage
+`{{execute}}
+
 
