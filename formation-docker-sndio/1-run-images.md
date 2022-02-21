@@ -52,12 +52,13 @@ Testez par exemple:
 
 `
 docker exec $ID_CONTENEUR cat README.md
-`
+`{{execute}}
 
 `
 docker exec -it $ID_CONTENEUR bash
-`
-(ne fonctionne que si l'image à bash, évidemment)
+`{{execute}}
+
+> (ne fonctionne que si l'image à bash, évidemment)
 
 >> Question : combien y a-t-il de fichiers dans ./webapps dans le conteneur après son démarrage? <<
 === 0
