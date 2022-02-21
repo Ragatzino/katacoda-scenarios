@@ -14,6 +14,7 @@ export PATH=${M2_HOME}/bin:${PATH} \
 chmod +x /etc/profile.d/maven.sh
 source /etc/profile.d/maven.sh
 # install psql
-apt install postgresql
-apt install postgresql-contrib
-apt install postgresql-client-common
+apt-get install wget ca-certificates
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+apt update
+apt install postgresql postgresql-contrib postgresql-client-common
