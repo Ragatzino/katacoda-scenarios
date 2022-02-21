@@ -37,13 +37,39 @@ Documentation : https://docs.docker.com/engine/reference/commandline/build/
 
 Construire une image revient a l'utilisation de la commande docker build : 
 
-> La balise -t permet de nommer son image docker
+> La balise -t (tag) permet de nommer son image docker
 
 > Le dernier argument est l'emplacement du fichier Dockerfile, à partir duquel on va créer l'image
 
 `
 docker build -t monapache ./apache/
 `{{execute}}
+
+<details>
+<summary>(Alternative)</summary>
+    <p>
+
+- Déplacement
+
+`
+cd /root/apache/
+`{{execute}}
+
+- Construction de l'image a partir de tout ce qu'on a à la racine
+
+`
+docker build -t monapache .
+`{{execute}}
+
+- Retour arrière
+
+`
+cd /root/
+`{{execute}}
+
+
+</p>
+</details>
 
 ## Lancez votre application
 Encore une fois on va lancer l'application, elle tourne sur le port 80 dans le conteneur
