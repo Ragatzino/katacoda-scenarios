@@ -25,13 +25,11 @@
       },
       {
         "title": "Construction d'une image docker pour un tomcat",
-        "text": "4-build-maven-docker-image.md",
-        "courseData":"script-install-psql.sh"
+        "text": "4-build-maven-docker-image.md"
       },
       {
         "title": "Notion de volume",
-        "text": "5-volumes.md",
-        "courseData":"script-install-psql.sh"
+        "text": "5-volumes.md"
       },
       {
         "title": "Construction d'une image docker pour une base de données PostgreSql et utilisation",
