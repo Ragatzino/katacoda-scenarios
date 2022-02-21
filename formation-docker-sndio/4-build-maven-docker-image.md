@@ -63,12 +63,13 @@ CMD ["catalina.sh","run"]
 
 ### Construction de l'image
 
+Ajoutez le fichier Dockerfile créé a la racine de l'application puis construisez l'image avec docker build : 
 
 `
 docker build -t app .
 `{{execute}}
 
-et test
+et testez votre application
 
 `
 docker run -p 8080:8080 app
