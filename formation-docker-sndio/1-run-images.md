@@ -24,8 +24,14 @@ L'option -d permet de lancer un conteneur sur la machine en arrière plan.
 => Cette option fait que l'on retourne l'id du conteneur
 
 `
+docker run -d -p 8888:8080 tomcat:9-jre11
+`{{execute}}
+
+On construira parfois la variable ID_CONTENEUR a partir de ce qui est lancé
+
+`
 ID_CONTENEUR=$(\
-docker run -d -p 8888:8080 tomcat:9-jre11 \
+docker run -d -p 8999:8080 tomcat:9-jre11 \
 )
 `{{execute}}
 
