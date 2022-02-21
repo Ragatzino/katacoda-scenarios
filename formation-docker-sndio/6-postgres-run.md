@@ -76,7 +76,6 @@ Utilisez les volumes pour lancer une base de données avec les scripts disponibl
 <details>
 <summary>Solution</summary>
     <p>
-
 `
 docker run -d \
   -e POSTGRES_USER=postgres \
@@ -84,7 +83,7 @@ docker run -d \
   -e POSTGRES_PASSWORD=mdp \
   -e PGDATA=/var/lib/postgresql/data/pgdata \
   -v /root/postgres/:/docker-entrypoint-initdb.d/ \
-  -p 5432:5432 \
+  -p 5433:5432 \
   postgres:11 
 `{{execute}}
 
