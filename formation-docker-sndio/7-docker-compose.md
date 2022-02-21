@@ -29,31 +29,17 @@ Pour le tomcat, spring boot permet de valoriser les properties via variables d'e
 
 > Il s'agit là d'une version JSONIFIEE de vos properties, ça devrait vous dire quelque chose.
 
+Nous récupérons cela du projet : 
 `
-SPRING_APPLICATION_JSON='
-{
-    "spring":{
-        "datasource":
-            {
-                "url":"jdbc:localhost:5432/postgres",
-                "driverClassName":"org.postgresql.Driver",
-                "username":"postgres",
-                "password":"mdp"
-            }
-        },
-        "jpa":
-            {
-                "defer-datasource-initialization":"false"
-            }
-}
-'
-`{{execute}}
+cat /root/formation/.env
+`
+
 
 > Une fois les properties a valoriser renseignées, on peut y aller ! 
 
 `
 docker run -d \
-  -e SPRING_APPLICATION_JSON=$SPRING_APPLICATION_JSON \
+  --env-file ./.env \
   -p 8080:8080 \
   app
 `{{execute}}
