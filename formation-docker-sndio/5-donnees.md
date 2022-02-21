@@ -30,6 +30,11 @@ Maintenant si l'on crée un fichier sur notre machine :
 echo "message" > /root/espace-partage/message.txt
 `{{execute}}
 
+Que l'on retrouve par exemple avec la commande ls :
+`
+ls /root/espace-partage/
+`{{execute}}
+
 On peut aller le retrouver sur notre conteneur :
 `
 docker exec $ID_CONTENEUR ls /root/espace-partage/
@@ -48,7 +53,7 @@ Vous pouvez créer un volume avec la commande :
 docker run -d \
 -v  ubuntu_partage:/root/espace-partage \
 ubuntu \
-bin/bash -c "while true; do echo hello world; sleep 1; done
+bin/bash -c "while true; do echo hello world; sleep 1; done"
 `{{execute}}
 
 
@@ -63,31 +68,12 @@ docker volume ls
 Vous pouvez observer les détails pour chaque volume avec :
 
 `
-docker inspect $ID_VOLUME
+docker inspect $NOM_VOLUME
 `
 
-## Nettoyage, ou presque?
-
-Que se passe-t-il quand le conteneur s'arrête ? => Vérifions cela
+exemple :
 `
-docker kill $ID_CONTENEUR
+docker inspect ubuntu_partage
 `{{execute}}
 
-`
-docker volume ls
-`{{execute}}
-
-`
-docker rm $ID_CONTENEUR
-`{{execute}}
-
->> Reste-t-il un volume ?  <<
-( ) Non
-(*) Oui
-
-> Pour supprimer simplement le volume défini il faut faire la commande : 
-
-`
-docker volume rm <id-volume>
-`
 
