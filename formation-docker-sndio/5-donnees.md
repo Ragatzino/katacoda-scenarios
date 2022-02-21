@@ -56,6 +56,10 @@ ubuntu \
 bin/bash -c "while true; do echo hello world; sleep 1; done"
 `{{execute}}
 
+Tentez de supprimer le volume avec un conteneur qui tourne : 
+`
+docker volume rm ubuntu_partage
+`{{execute}}
 
 Accédez a la liste des volumes docker
 

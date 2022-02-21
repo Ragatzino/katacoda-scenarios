@@ -53,4 +53,7 @@ curl localhost:8080/users
 
 ## Docker compose?
 
-Il s'agit maintenant de tout packager en un seul fichier: 
+Le principe de docker compose est de regrouper tout un deploiement de conteneurs en definissant une architecture, en vue d'une intégration facilitée sur un serveur ou un poste de travail en local.
+
+
+

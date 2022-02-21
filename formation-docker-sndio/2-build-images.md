@@ -21,12 +21,12 @@ Il faut comprendre que l'on part toujours d'un environnement existant pour crée
 - Un dossier apache/ a été crée a la racine de votre environnement il contient la définition du Dockerfile et un fichier index.html servant d'exemple
 
 `
-cat apache/public-html/index.html
+cat /root/apache/public-html/index.html
 `{{execute}}
 
 
 `
-cat apache/Dockerfile
+cat /root/apache/Dockerfile
 `{{execute}}
 
 
@@ -42,7 +42,7 @@ Construire une image revient a l'utilisation de la commande docker build :
 > Le dernier argument est l'emplacement du fichier Dockerfile, à partir duquel on va créer l'image
 
 `
-docker build -t monapache ./apache/
+docker build -t monapache /root/apache/
 `{{execute}}
 
 <details>
