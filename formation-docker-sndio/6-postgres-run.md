@@ -10,13 +10,14 @@ L'installation d'une base postgres sur un environnement via docker se fait en ut
 Lançons par exemple une instance de postgres 11 : 
 
 `
-ID_CONTENEUR=$(docker run -d \
+docker run -d \
+  --name postgres-base \
   -e POSTGRES_USER=postgres \
   -e POSTGRES_DB=postgres \
   -e POSTGRES_PASSWORD=mdp \
   -p 5432:5432 \
   --name postgres postgres:11 \
-  )
+
 `{{execute}}
 
 Vous pouvez y accéder directement:
@@ -49,6 +50,7 @@ mkdir /root/pg_data/
 
 `
 docker run -d \
+  --name=postgres-avec-volume \
   -e POSTGRES_USER=postgres \
   -e POSTGRES_DB=postgres \
   -e POSTGRES_PASSWORD=mdp \
@@ -77,6 +79,7 @@ Utilisez les volumes pour lancer une base de données avec les scripts disponibl
     <p>
 `
 docker run -d \
+  --name=postgres-avec-init \
   -e POSTGRES_USER=postgres \
   -e POSTGRES_DB=postgres \
   -e POSTGRES_PASSWORD=mdp \

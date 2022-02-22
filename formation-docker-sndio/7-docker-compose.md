@@ -14,6 +14,7 @@ Pour la base de données, il s'agit de la fin de la précédente page de la form
 
 `
 docker run -d \
+  --name=postgres \
   -e POSTGRES_USER=postgres \
   -e POSTGRES_DB=postgres \
   -e POSTGRES_PASSWORD=mdp \
@@ -39,6 +40,7 @@ cat /root/formation/.env
 
 `
 docker run -d \
+  --name=app \
   --env-file ./.env \
   -p 8080:8080 \
   app

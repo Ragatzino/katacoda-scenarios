@@ -21,25 +21,21 @@ Des versions plus légères (slim) existent également.
 L'option -p permet de définir le port sur la machine hote ouvert sur le conteneur : un tomcat exposant sur le port 8080 par défaut
 
 `
-docker run -p 8080:8080 tomcat:9-jre11
+docker run --name tomcat1 -p 8080:8080 tomcat:9-jre11
 `{{execute}}
 
 > Cela expose le port 8080 du conteneur vers le port 8080 de la machine.
+
+
+**Lancer un conteneur en tache de fond:** 
 
 L'option -d permet de lancer un conteneur sur la machine en arrière plan.
 => Cette option fait que l'on retourne l'id du conteneur
 
 `
-docker run -d -p 8888:8080 tomcat:9-jre11
+docker run -d --name tomcat2 -p 8888:8080 tomcat:9-jre11
 `{{execute}}
 
-On construira parfois la variable ID_CONTENEUR a partir de l'id qui nous est retourné après le lancement d'un conteneur
-
-`
-ID_CONTENEUR=$(\
-docker run -d -p 8999:8080 tomcat:9-jre11 \
-)
-`{{execute}}
 
 ### Consultez les processus
 
@@ -65,11 +61,11 @@ docker exec ID_CONTENEUR <commande-dans-le-conteneur>
 **Testez par exemple:**
 
 `
-docker exec $ID_CONTENEUR cat README.md
+docker exec tomcat2 cat README.md
 `{{execute}}
 
 `
-docker exec -it $ID_CONTENEUR bash
+docker exec -it tomcat2 bash
 `{{execute}}
 
 - (ne fonctionne que si l'image à bash, évidemment)

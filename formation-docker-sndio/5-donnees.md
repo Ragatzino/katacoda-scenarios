@@ -16,8 +16,9 @@ L'option pour monter un volume s'utilise lors du lancement via docker run avec l
 
 Essayez :
 `
-ID_CONTENEUR=$(docker run -d \
+docker run -d \
 -v  /root/espace-partage:/root/espace-partage \
+--name ubuntu-conteneneur \
 ubuntu \
 bin/bash -c "while true; do echo hello world; sleep 1; done")
 `{{execute}}
@@ -37,7 +38,7 @@ ls /root/espace-partage/
 
 On peut aller le retrouver sur notre conteneur :
 `
-docker exec $ID_CONTENEUR ls /root/espace-partage/
+docker exec ubuntu-conteneneur ls /root/espace-partage/
 `{{execute}}
 
 ## Docker volumes
