@@ -31,6 +31,8 @@ Pseudo script :
 
 ### Dépot du war dans webapps : Dockerfile
 
+**Accedez a l'onglet vscode de votre environnement** 
+
 Mot clés nécessaires (on les retrouve dans [la documentation](https://docs.docker.com/engine/reference/builder/)) : 
 - FROM: départ d'une image
 - EXPOSE 8080 : pour exposer le port 8080 par défaut sur le tomcat 

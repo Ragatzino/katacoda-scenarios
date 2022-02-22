@@ -13,7 +13,7 @@ Pour la base de données, il s'agit de la fin de la précédente page de la form
 
 `
 docker run -d \
-  --name=postgres \
+  --name=postgres-app \
   -e POSTGRES_USER=postgres \
   -e POSTGRES_DB=postgres \
   -e POSTGRES_PASSWORD=mdp \
@@ -37,7 +37,7 @@ cat /root/formation/.env
 En plus joli :
 
 `
-cat /root/formation/.env | cut -d "SPRING_APPLICATION_JSON=" -f2 | python -m json.tool
+cat /root/formation/.env | grep SPRING_APPLICATION_JSON | cut -d "=" -f2 | python -m json.tool
 `{{execute}}
 
 

@@ -26,7 +26,7 @@ services:
     ports:
       - 8080:8080
     environment:
-        - SPRING_APPLICATION_JSON={"spring":{"datasource":{"url":"jdbc:postgresql:localhost:5432/postgres","driverClassName":"org.postgresql.Driver","username":"postgres","password":"mdp"}},"jpa":{"defer-datasource-initialization":"false"}}
+        - SPRING_APPLICATION_JSON={"spring":{"datasource":{"url":"jdbc:postgresql:localhost:5432/postgres","driverClassName":"org.postgresql.Driver","username":"postgres","password":"mdp"}},"jpa":{"defer-datasource-initialization":"false","database-platform":"org.hibernate.dialect.PostgreSQLDialect"}}
     restart: on-failure
     depends_on:
       - postgresql

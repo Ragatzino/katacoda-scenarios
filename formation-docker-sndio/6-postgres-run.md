@@ -16,8 +16,7 @@ docker run -d \
   -e POSTGRES_DB=postgres \
   -e POSTGRES_PASSWORD=mdp \
   -p 5432:5432 \
-  --name postgres postgres:11 \
-
+  --name postgres postgres:11
 `{{execute}}
 
 Vous pouvez y accéder directement:
@@ -75,11 +74,16 @@ Un script d'initialisation de base de données a été chargé sur /root/postgre
 tree -L 2 /root/
 `{{execute}}
 
+**Voir le script**: `
+cat /root/postgres/initdb.sql
+`{{execute}}
+
 Utilisez les volumes pour lancer une base de données avec les scripts disponibles dans **/root/postgres/**
 
 <details>
 <summary>Solution (cliquer pour avoir la réponse)</summary>
     <p>
+
 `
 docker run -d \
   --name=postgres-avec-init \
@@ -92,7 +96,9 @@ docker run -d \
   postgres:11 
 `{{execute}}
 
-> Verifications : ci dessous
+<br/>
+
+**Verifications :***
 
 `
   psql -h localhost -p 5433  -U postgres -c 'SELECT * from utilisateur;'
