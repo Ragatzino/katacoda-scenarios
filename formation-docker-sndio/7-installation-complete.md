@@ -105,7 +105,7 @@ docker run -d \
 
 => Il ne s'agit plus de localhost 5432 mais de reseau-partage.postgres-app
 
-On a modifie le fichier en consequence :
+On a modifie le fichier .env en consequence :
 
 `
 cat /root/formation/.env.solution | grep SPRING_APPLICATION_JSON | cut -d "=" -f2 | python -m json.tool
