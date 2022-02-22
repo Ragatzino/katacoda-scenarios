@@ -37,7 +37,7 @@ cat /root/formation/.env
 En plus joli :
 
 `
-cat /root/formation/.env | cut -d "=" -f2 | python -m json.tool
+cat /root/formation/.env | cut -d "SPRING_APPLICATION_JSON=" -f2 | python -m json.tool
 `{{execute}}
 
 

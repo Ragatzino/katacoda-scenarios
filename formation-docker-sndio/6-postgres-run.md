@@ -43,10 +43,13 @@ Par défaut postgresql attend des données sur **/var/lib/postgresql/data** (on 
 
 A chaque fois que vous utilisez une image qui nécessite un volume, il est préconisé de préciser l'espace utilisé, afin de ne pas le dupliquer autant de fois que l'image tourne.
 
-Cela se fait par l'option **-v** de docker run :
+Créons un espace dedie :
+
 `
 mkdir /root/pg_data/
 `{{execute}}
+
+Cela se fait par l'option **-v** de docker run :
 
 `
 docker run -d \
@@ -89,7 +92,8 @@ docker run -d \
   postgres:11 
 `{{execute}}
 
-Verifications : 
+> Verifications : ci dessous
+
 `
   psql -h localhost -p 5433  -U postgres -c 'SELECT * from utilisateur;'
 `{{execute}}
