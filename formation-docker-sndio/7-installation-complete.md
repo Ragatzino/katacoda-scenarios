@@ -1,5 +1,4 @@
-Le principe du docker compose est de concentrer toute la configuration d'applications nécessitant plusieurs container.
-
+Nous allons maintenant installer cette application 
 ## Interface entre une application spring boot et une base postgres
 
 Mettons en lien l'application packagée en seconde partie de formation avec la base postgres.
@@ -30,10 +29,16 @@ Pour le tomcat, spring boot permet de valoriser les properties via variables d'e
 
 > Il s'agit là d'une version JSONIFIEE de vos properties, ça devrait vous dire quelque chose.
 
-Nous récupérons cela du projet : 
+Nous récupérons cela du projet :
 `
 cat /root/formation/.env
+`{{execute}}
+
+En plus joli :
+
 `
+cat /root/formation/.env | cut -d "=" -f2 | python -m json.tool
+`{{execute}}
 
 
 > Une fois les properties a valoriser renseignées, on peut y aller ! 
@@ -53,9 +58,7 @@ Pour s'assurer que tout marche, regardons la liste des utilsateurs que l'api nou
 curl localhost:8080/users
 `{{execute}}
 
-## Docker compose?
 
-Le principe de docker compose est de regrouper tout un deploiement de conteneurs en definissant une architecture, en vue d'une intégration facilitée sur un serveur ou un poste de travail en local.
 
 
 

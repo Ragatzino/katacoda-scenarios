@@ -29,7 +29,7 @@ psql -h localhost -p 5432  -U postgres -c 'SELECT 1;'
 ou depuis l'intérieur du conteneur:
 
 `
-docker exec $ID_CONTENEUR psql -U postgres -c 'SELECT 1;'
+docker exec postgres-base psql -U postgres -c 'SELECT 1;'
 `{{execute}}
 
 Postgres utilise par défaut des volumes, constatez par vous même : 
@@ -91,7 +91,7 @@ docker run -d \
 
 Verifications : 
 `
-  psql -h localhost -p 5433  -U postgres -c 'SELECT * from user;'
+  psql -h localhost -p 5433  -U postgres -c 'SELECT * from utilisateur;'
 `{{execute}}
 
 </p>

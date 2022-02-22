@@ -37,8 +37,12 @@
         "courseData":"fetch-initdb.sh"
       },
       {
+        "title": "Installation complète",
+        "text": "7-installation-complete.md"
+      },
+      {
         "title": "Packaging groupé, docker compose et environnement",
-        "text": "7-docker-compose.md",
+        "text": "8-docker-compose.md",
         "courseData":"docker-compose.sh"
       },
       {
