@@ -65,68 +65,7 @@ curl localhost:8080/users
 
 <details>
 <summary>Que se passe-t-il ?</summary>
-    <p>
-
-## Resolution
-
-Le tomcat ne voit pas le postgres sur **localhost:5432**, c'est normal. Le postgres expose son port 5432 en local et pas au tomcat.
-
-Il faut donc creer un reseau :
-`
-docker network create reseau-partage
-`{{execute}}
-
-Supprimer les conteneurs qui tournent actuellement :
-`
-docker kill postgres-app
-docker rm postgres-app
-docker kill tomcat-app
-docker rm tomcat-app
-`{{execute}}
-
-Et les relancer sur le meme reseau partage avec l'option --net : 
-
-**Postgres:**
-
-`
-docker run -d \
-  --net reseau-partage \
-  --name=postgres-app \
-  -e POSTGRES_USER=postgres \
-  -e POSTGRES_DB=postgres \
-  -e POSTGRES_PASSWORD=mdp \
-  -e PGDATA=/var/lib/postgresql/data/pgdata \
-  -v /root/postgres/:/docker-entrypoint-initdb.d/ \
-  -p 5432:5432 \
-  postgres:11
-`{{execute}}
-
-**Tomcat:**
-
-=> Il ne s'agit plus de localhost 5432 mais de reseau-partage.postgres-app
-
-On a modifie le fichier .env en consequence :
-
-`
-cat /root/formation/.env.solution | grep SPRING_APPLICATION_JSON | cut -d "=" -f2 | python -m json.tool
-`{{execute}}
 
 
-`
-docker run -d \
-  --net reseau-partage \
-  --name=tomcat-app \
-  --env-file ./.env.solution \
-  -p 8080:8080 \
-  app
-`{{execute}}
-
-
-
-**Verification:**
-`
-curl localhost:8080/users
-`{{execute}}
-
-
+C'est une histoire de réseau : accédez à la page suivante
 </details>

@@ -41,13 +41,17 @@
         "text": "7-installation-complete.md"
       },
       {
+        "title": "Réseau : Fin de l'installation",
+        "text": "8-reseau.md"
+      },
+      {
         "title": "Packaging groupé, docker compose et environnement",
-        "text": "8-docker-compose.md",
+        "text": "9-docker-compose.md",
         "courseData":"docker-compose.sh"
       },
       {
         "title": "Automatisation avec kaniko",
-        "text": "9-kaniko.md"
+        "text": "10-kaniko.md"
       }
     ],
     "intro": {
