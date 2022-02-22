@@ -19,7 +19,7 @@ docker run -d \
   -e POSTGRES_PASSWORD=mdp \
   -e PGDATA=/var/lib/postgresql/data/pgdata \
   -v /root/postgres/:/docker-entrypoint-initdb.d/ \
-  -p 5433:5432 \
+  -p 5432:5432 \
   postgres:11
 `{{execute}}
 
@@ -49,6 +49,11 @@ docker run -d \
   --env-file ./.env \
   -p 8080:8080 \
   app
+`{{execute}}
+
+Vous pouvez suivre le demarrage de l'appli : 
+`
+docker logs -f app
 `{{execute}}
 
 ## Test
