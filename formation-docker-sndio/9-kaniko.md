@@ -17,4 +17,20 @@ docker run \
     --context dir:///workspace/
 `
 
-> Il faut donc renseigner : l'image a l'arrivée dans le registre ici (gcr.io/$PROJECT_ID/$IMAGE_NAME:$TAG) mais par exemple : (https://)
+> Il faut donc renseigner : l'image a l'arrivée dans le registre ici (gcr.io/$PROJECT_ID/$IMAGE_NAME:$TAG) mais par exemple en interne: (https://harbor.developpement.insee.fr/)
+
+## Qu'est ce que ca changerait en interne ?
+
+**Creer des logins sur un registry interne :**
+
+- Connectez vous a https://harbor.developpement.insee.fr/harbor/projects
+- Creez un projet 
+- Creer un compte robot (Sauvegardez les donnees)
+
+**Creation d'un projet sur Gitlab :**
+
+- Recreez un depot git a partir du depot de l'appli spring boot
+- Ajouter votre Dockerfile construit au cours de la formation
+- Et integrez l'appel a kaniko pour construire l'image dans un docker 
+=> Exemple : https://gitlab.insee.fr/exemples-kube-orleans/image-docker
+
