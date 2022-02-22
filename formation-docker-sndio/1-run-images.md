@@ -70,5 +70,4 @@ docker exec -it tomcat2 bash
 
 - (ne fonctionne que si l'image à bash, évidemment)
 
->> Question : combien y a-t-il de fichiers dans ./webapps dans le conteneur après son démarrage? <<
-=== 0
+Question par exemple : combien y a-t-il de fichiers dans ./webapps dans le conteneur après son démarrage?

@@ -48,6 +48,10 @@
       {
         "title": "Automatisation avec kaniko",
         "text": "9-kaniko.md"
+      },
+      {
+        "title": "Questionnaire",
+        "text": "10-kaniko.md"
       }
     ],
     "intro": {
