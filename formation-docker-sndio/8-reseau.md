@@ -38,7 +38,7 @@ docker run -d \
 docker run -d \
   --net host \
   --name=tomcat-app \
-  --env-file ./.env.solution \
+  --env-file ./.env \
   -p 8080:8080 \
   app
 `{{execute}}
@@ -124,9 +124,9 @@ docker kill tomcat-app
 docker rm tomcat-app
 `{{execute}}
 
-- Un nouveau fichier changeant la declaration de l'environnement est disponible sous /root/formation/.env.local
+- Un nouveau fichier changeant la declaration de l'environnement est disponible sous /root/formation/.env.example
 `
-cat /root/formation/.env.local | grep SPRING_APPLICATION_JSON | cut -d "=" -f2 | python -m json.tool
+cat /root/formation/.env.example | grep SPRING_APPLICATION_JSON | cut -d "=" -f2 | python -m json.tool
 `{{execute}}
 
 - On relance le tomcat avec ces variables d'environnement :
@@ -134,7 +134,7 @@ cat /root/formation/.env.local | grep SPRING_APPLICATION_JSON | cut -d "=" -f2 |
 `
 docker run -d \
   --name=tomcat-app \
-  --env-file /root/formation/.env.local \
+  --env-file /root/formation/.env.example \
   -p 8080:8080 \
   app
 `{{execute}}
