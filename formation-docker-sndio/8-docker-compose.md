@@ -9,14 +9,13 @@ Docker compose fonctionne avec un fichier de configuration general : le docker-c
 
 Il definit plusieurs concepts et permet une installation et desinstallation tres simplifiee d'une application:
 
-- Services : Chaque sous module avec image docker
-- Network : Reseau partage ou non par les conteneurs
-- Volumes : Les volumes du deploiement
+- `services` : Chaque sous module avec image docker
+- `network` : Definit le reseau partagé par les conteneurs
+- `volumes` : Les volumes du deploiement
 
 Cela donne un fichier de la sorte docker-compose.yml:
 
 `
----
 version: '3.8'
 services:
   appli:
@@ -60,5 +59,5 @@ networks:
 
 > Remarques : on a ici plusieurs choses en plus 
 
-- depends_on => Attend que le postgres demarre pour se lancer
-- restart => Permet de preparer le cycle de vie de l'appli
+`depends_on` :  Attend que le postgres demarre pour se lancer
+`restart` : Permet de preparer le cycle de vie de l'appli
