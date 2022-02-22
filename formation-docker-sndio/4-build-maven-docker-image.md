@@ -60,6 +60,15 @@ COPY target/*.war $CATALINA_HOME/webapps/
 CMD ["catalina.sh","run"]
 ```{{copy}}
 
+Commande qui le cree directement au bon endroit :
+
+`
+echo "FROM tomcat:9-jre11 
+EXPOSE 8080
+COPY target/*.war \$CATALINA_HOME/webapps/
+CMD [\"catalina.sh\",\"run\"]" > /root/formation/Dockerfile
+`{{execute}}
+
 </p>
 </details>
 
