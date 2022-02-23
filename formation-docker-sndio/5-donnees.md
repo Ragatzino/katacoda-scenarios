@@ -20,7 +20,7 @@ docker run -d \
 -v  /root/espace-partage:/root/espace-partage \
 --name ubuntu-conteneneur \
 ubuntu \
-bin/bash -c "while true; do echo hello world; sleep 1; done")
+bin/bash -c "while true; do echo hello world; sleep 1; done"
 `{{execute}}
 
 > Remarque : on a ici variabilisé l'id_conteneur pour plus de practicité
