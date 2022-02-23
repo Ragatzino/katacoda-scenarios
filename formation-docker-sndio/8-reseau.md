@@ -2,35 +2,16 @@ Le tomcat ne voit pas le postgres sur **localhost:5432**, c'est normal. Le postg
 
 ## Reseau : Utilisation du reseau de l'hote (machine)
 
-On donne l'acces au reseau de l'hote pour les conteneurs (risque en production)
+On donne l'acces au reseau de l'hote pour le tomcat (interdit en prod)
 
 - On va donc supprimer les conteneurs qui tournent actuellement :
 
 `
-docker kill postgres-app
-docker rm postgres-app
 docker kill tomcat-app
 docker rm tomcat-app
 `{{execute}}
 
-- Et les relancer en precisant qu'ils sont sur le reseau de l'hote a l'aide de l'option **--net**
-
-
-**Postgres:**
-
-`
-docker run -d \
-  --net host \
-  --name=postgres-app \
-  -e POSTGRES_USER=postgres \
-  -e POSTGRES_DB=postgres \
-  -e POSTGRES_PASSWORD=mdp \
-  -e PGDATA=/var/lib/postgresql/data/pgdata \
-  -v /root/postgres/:/docker-entrypoint-initdb.d/ \
-  -p 5432:5432 \
-  postgres:11
-`{{execute}}
-
+- Et on relance le tomcat en precisant qu'il est sur le reseau de l'hote a l'aide de l'option **--net host**
 
 **Tomcat:**
 
@@ -133,6 +114,7 @@ cat /root/formation/.env.example | grep SPRING_APPLICATION_JSON | cut -d "=" -f2
 
 `
 docker run -d \
+  --net reseau-partage \
   --name=tomcat-app \
   --env-file /root/formation/.env.example \
   -p 8080:8080 \

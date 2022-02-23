@@ -15,7 +15,7 @@ Il definit plusieurs concepts et permet une installation et desinstallation tres
 
 Cela donne un fichier de la sorte docker-compose.yml:
 
-`
+```yaml
 version: '3.8'
 services:
   appli:
@@ -25,7 +25,7 @@ services:
     ports:
       - 8080:8080
     environment:
-        - SPRING_APPLICATION_JSON={"spring":{"datasource":{"url":"jdbc:postgresql:localhost:5432/postgres","driverClassName":"org.postgresql.Driver","username":"postgres","password":"mdp"}},"jpa":{"defer-datasource-initialization":"false","database-platform":"org.hibernate.dialect.PostgreSQLDialect"}}
+        - SPRING_APPLICATION_JSON={"spring":{"h2":{"console":{"enabled":"false"}},"datasource":{"url":"jdbc:postgresql://postgres-app:5432/postgres","driverClassName":"org.postgresql.Driver","username":"postgres","password":"mdp"}},"jpa":{"defer-datasource-initialization":"false","database-platform":"org.hibernate.dialect.PostgreSQLDialect"}}
     restart: on-failure
     depends_on:
       - postgresql
@@ -55,7 +55,7 @@ volumes:
 
 networks:
   reseau-partage:
-`{{copy}}
+```{{copy}}
 
 > Remarques : on a ici plusieurs choses en plus 
 
