@@ -21,6 +21,11 @@ Il faut comprendre que l'on part toujours d'un environnement existant pour crée
 - Un dossier apache/ a été crée a la racine de votre environnement il contient la définition du Dockerfile et un fichier index.html servant d'exemple
 
 `
+docker run -d -p 80:8080 httpd
+`{{execute}}
+
+    
+`
 cat /root/apache/public-html/index.html
 `{{execute}}
 
