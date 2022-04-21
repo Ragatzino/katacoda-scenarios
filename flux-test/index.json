@@ -1,0 +1,31 @@
+{
+  "title": "test de flux",
+  "description": "scenario permettant d'experimenter avec flux",
+  "difficulty": "Beginner",
+  "time": "60 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Step 1",
+        "text": "step1.md"
+      },
+      {
+        "title": "Step 2",
+        "text": "step2.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "showIde":"true",
+    "uilayout": "editor-terminal"
+  },
+  "backend": {
+    "imageid": "minikube-running"
+  }
+}
